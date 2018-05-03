@@ -1,9 +1,10 @@
 import { createStore, combineReducers } from 'redux';
-import * as filterType from './filterType';
-import filterReducer from './components/filter/reducer';
+import { reducer as filterReducer } from './components/filter';
+import { reducer as todoReducer } from './components/todos';
 
 const reducer = combineReducers({
-    filter: filterReducer
+    filter: filterReducer,
+    todo: todoReducer
 });
 
 const store = createStore(reducer, {});

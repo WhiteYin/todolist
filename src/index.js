@@ -3,10 +3,14 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import store from './Store';
 import { view as Filter } from './components/filter';
+import { view as TodoList } from './components/todos';
 
 ReactDOM.render(
     <Provider store={store}>
-        <Filter />
+        <div>
+            <Filter />
+            <TodoList />
+        </div>
     </Provider>,
     document.getElementById('app')
 );

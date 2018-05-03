@@ -35,7 +35,7 @@ const mapStateToProps = (state, containerPorps) => {
     };
 };
 
-const mapDispachToProps = (dispach, containerProps) => {
+const mapDispatchToProps = (dispach, containerProps) => {
     return {
         setFilter: () => {
             dispach(actions.setFilter(containerProps.filter));
@@ -43,4 +43,4 @@ const mapDispachToProps = (dispach, containerProps) => {
     };
 };
 
-export default connect(mapStateToProps, mapDispachToProps)(Link);
+export default connect(mapStateToProps, mapDispatchToProps)(Link);

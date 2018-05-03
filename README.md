@@ -1,10 +1,7 @@
-## 个人项目基础配置
+## React-todolist
 
-## 适用环境
-Webpack : v3.11.0  
-Webpack-dev-server : v2.11.0  
-JS : ES6 + React + react-redux + babel  
-CSS : postcss + LESS  
+## 简介
+React练手项目
 
 ## LICENSE
 MIT License

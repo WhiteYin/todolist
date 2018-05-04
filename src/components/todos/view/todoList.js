@@ -1,12 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import TodoItem from './todoItem';
+import AddInput from './addInput';
 import { connect } from 'react-redux';
 import * as todoTypes from '../../../filterType';
 
 const TodoList = ({ list }) => {
     return (
         <div>
+            <AddInput />
             <ul>
                 {
                     list.map((item) => {
@@ -25,7 +27,6 @@ TodoList.propTypes = {
 };
 
 function mapStateToProps(state) {
-
     const list = state.todo.filter((item) => {
         switch (state.filter) {
             case todoTypes.ALL:

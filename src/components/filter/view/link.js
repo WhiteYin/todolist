@@ -8,7 +8,7 @@ const Link = ({ active, children, setFilter }) => {
     return (
         // 根据active的布尔值选择样式
         <span
-            style={active ? { backgroundColor: 'green' } : {}}
+            className={'filter-tab ' + (active ? 'filter-active' : '')}
             onClick={setFilter}
         >
             {children}

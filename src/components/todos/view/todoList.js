@@ -9,13 +9,15 @@ const TodoList = ({ list }) => {
     return (
         <div>
             <AddInput />
-            <ul>
+            <ul className="todo-list">
                 {
-                    list.map((item) => {
+                    // 如果有数据则显示
+                    list.length > 0 ? list.map((item) => {
                         return (
                             <TodoItem key={item.index} index={item.index} text={item.text} state={item.state} />
                         );
                     })
+                    : <li className="no-todo-tip">暂时还没有待办事项ヽ(≧□≦)ノ</li>
                 }
             </ul>
         </div>

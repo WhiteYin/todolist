@@ -1,0 +1,53 @@
+@import (reference) "./constant.less";
+@import "./components/filter/style/index.less";
+@import "./components/todos/style/index.less";
+
+html{
+    height:100%;
+}
+body{
+    background-color:@backgroundColor; 
+    height:100%;
+}
+#app{
+    box-sizing: border-box;
+    min-height:100%;
+    max-width:@maxWidth;
+    margin:0 auto;
+    padding-top: 30px;
+}
+body,p{
+    margin:0;
+}
+.btn(@active:@activeColor,@normal:@normalColor,@w:150px,@h:30px){
+    box-sizing: border-box;
+
+    width: @w;
+    height: @h;
+    line-height: @h;
+    margin-left: 20px;
+
+    text-align: center;
+    border-radius: @radiusSize;
+    border: 1px solid @active;
+    background-color: @normal;
+    color: @active;
+
+    &:hover{
+        border: 1px solid @normal;
+        background-color: @active;
+        color: @normal;
+    }
+
+    &:active{
+        border: 1px solid @normal;
+        background-color: @active;
+        color: @normal;
+    }
+}
+.active-btn{
+    .btn(@normalColor,@activeColor);
+}
+.normal-btn{
+    .btn();
+}

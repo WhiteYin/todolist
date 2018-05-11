@@ -13,15 +13,17 @@ class AddInput extends Component {
 
     add() {
         const todoText = this.inputRef.current.value;
-        this.props.addTodo(todoText);
-        this.inputRef.current.value = '';
+        if (todoText !== '') {
+            this.props.addTodo(todoText);
+            this.inputRef.current.value = '';
+        }
     }
 
     render() {
         return (
-            <div>
-                <input type="text" placeholder="请输入待办事项" ref={ this.inputRef }/>
-                <button onClick={ this.add }>新增</button>
+            <div className="input-container">
+                <input className="add-input" type="text" placeholder="请输入待办事项" ref={ this.inputRef }/>
+                <div className="normal-btn" onClick={ this.add }>新增</div>
             </div>
         );
     }

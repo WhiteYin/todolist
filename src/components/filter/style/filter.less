@@ -1,24 +1,27 @@
-@activeColor: #f9d180;
+@activeColor: #f25555;
 @containerColor: white;
-@tabColor: #cee3f2;
-@maxWidth: 640px;
+@tabColor: #fff;
+@lineHeight: 30px;
 @tabWidth: 100px;
 
 .filter-container{
     background-color:@containerColor;
-    max-width:@maxWidth;
+    color: @activeColor;
     margin-bottom:20px;
+    line-height:@lineHeight;
     display:flex;
     align-items: center;
     justify-content: space-around;
     
-    .filter-tab{
+    & .filter-tab{
         flex:1;
         width:@tabWidth;
         text-align: center;
+        border-radius: 10px;
     }
 
-    .filter-active{
+    & .filter-active{
         background-color: @activeColor;
+        color: @containerColor;
     }
 }

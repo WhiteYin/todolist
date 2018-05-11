@@ -5,6 +5,8 @@ import store from './Store';
 import { view as Filter } from './components/filter';
 import { view as TodoList } from './components/todos';
 
+import './index.less';
+
 ReactDOM.render(
     <Provider store={store}>
         <div>

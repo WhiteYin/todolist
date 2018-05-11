@@ -5,9 +5,9 @@ import { connect } from 'react-redux';
 
 const TodoItem = ({ text, state, deleteTodo, toggleTodo }) => {
     return (
-        <li>
-            <span onClick={toggleTodo} style={state ? { textDecoration: 'line-through' } : {}}>{text}</span>
-            <button onClick={deleteTodo} >删除</button>
+        <li className="todo-item">
+            <span className="todo-text" onClick={toggleTodo} style={state ? { textDecoration: 'line-through' } : {}}>{text}</span>
+            <button className="active-btn" onClick={deleteTodo} >删除</button>
         </li>
     );
 };

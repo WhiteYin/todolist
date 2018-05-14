@@ -16,7 +16,7 @@ const distDir = './dist/';
 const config = {
     context: path.resolve(__dirname, '../src'),
     entry: {
-        vendor: ['react','react-dom'],
+        vendor: ['react','react-dom','redux','react-redux'],
         index: './index.js'
     },
     output: {
@@ -82,7 +82,7 @@ const config = {
             filename: '[name].[contenthash:5].css'
         }),
         new HtmlWebpackPlugin({
-            title: '首页',
+            title: 'TODOList',
             template: '../static/index.html',
             favicon: '../assets/favicon.ico'
         }),
